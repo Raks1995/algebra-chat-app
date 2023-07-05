@@ -10,6 +10,7 @@
 
 .App-header {
 	background-color: #4a55a2;
+
 	font-family: 'Oswald', sans-serif;
 	overflow: visible;
 	display: flex;
@@ -51,8 +52,8 @@
 }
 
 .Messages-message > .avatar {
-	height: 35px;
-	width: 35px;
+	height: 32px;
+	width: 32px;
 	border-radius: 50%;
 	display: inline-block;
 	margin: 0 10px -10px;
@@ -73,11 +74,15 @@
 	padding: 5px 10px;
 	max-width: 400px;
 	margin: 0;
-	border-radius: 12px;
+	border-radius: 0 12px 12px 12px;
 	color: white;
 	display: inline-block;
 	word-wrap: break-word;
 	text-align: left;
+}
+
+.currentMember > .Message-content > .text {
+	border-radius: 12px 0 12px 12px;
 }
 
 form {
@@ -127,4 +132,10 @@ h1 {
 
 ::-webkit-scrollbar-thumb {
 	background: #4a55a2;
+}
+
+@media (max-width: 700px) {
+	.Message-content > .text {
+		max-width: 250px;
+	}
 }
