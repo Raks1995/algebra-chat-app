@@ -14,7 +14,7 @@ const Input = (props) => {
 	};
 
 	return (
-		<div className='Input'>
+		<div className='input'>
 			<form onSubmit={onSubmit}>
 				<input
 					onChange={onChange}
@@ -23,7 +23,9 @@ const Input = (props) => {
 					placeholder='Enter your message and press ENTER'
 					autoFocus={true}
 				/>
-				<button disabled={text.length === 0}>SEND</button>
+				<button disabled={text.length === 0} className='button'>
+					SEND
+				</button>
 			</form>
 		</div>
 	);

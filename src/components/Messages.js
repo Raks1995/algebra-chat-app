@@ -7,13 +7,13 @@ const Messages = (props) => {
 		const { member, text } = message;
 		const messageFromMe = member.username === currentMember.username;
 		const className = messageFromMe
-			? 'Messages-message currentMember'
-			: 'Messages-message';
+			? 'messages-message currentMember'
+			: 'messages-message';
 
 		return (
 			<li key={`message-${index}`} className={className}>
 				<span className='avatar' style={{ backgroundColor: member.color }} />
-				<div className='Message-content'>
+				<div className='message-content'>
 					<div className='username'>{member.username}</div>
 					<div className='text' style={{ backgroundColor: member.color }}>
 						{text}
@@ -23,7 +23,7 @@ const Messages = (props) => {
 		);
 	};
 
-	return <ul className='Messages-list'>{messages.map(renderMessage)}</ul>;
+	return <ul className='messages-list'>{messages.map(renderMessage)}</ul>;
 };
 
 export default Messages;
